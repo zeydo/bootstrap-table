@@ -450,7 +450,7 @@ const UtilsFilterControl = {
               .find(
                 `.date-filter-control.bootstrap-table-filter-control-${field}`
               )
-              .datepicker(filterDatepickerOptions)
+              .datepicker(JSON.parse(filterDatepickerOptions))
               .on('changeDate', ({currentTarget, keyCode}) => {
                 clearTimeout(currentTarget.timeoutId || 0)
                 currentTarget.timeoutId = setTimeout(() => {
